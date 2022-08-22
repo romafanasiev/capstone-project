@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/capstone-project/static/css/main.0c7d5f42.css",
-    "main.js": "/capstone-project/static/js/main.98d6e09d.js",
+    "main.js": "/capstone-project/static/js/main.b7526e2b.js",
     "static/js/787.01cfcb08.chunk.js": "/capstone-project/static/js/787.01cfcb08.chunk.js",
     "static/media/open-sans-v34-latin-regular.woff2": "/capstone-project/static/media/open-sans-v34-latin-regular.a1535f451fb7bb98f526.woff2",
     "static/media/crown.svg": "/capstone-project/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
     "index.html": "/capstone-project/index.html",
     "main.0c7d5f42.css.map": "/capstone-project/static/css/main.0c7d5f42.css.map",
-    "main.98d6e09d.js.map": "/capstone-project/static/js/main.98d6e09d.js.map",
+    "main.b7526e2b.js.map": "/capstone-project/static/js/main.b7526e2b.js.map",
     "787.01cfcb08.chunk.js.map": "/capstone-project/static/js/787.01cfcb08.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0c7d5f42.css",
-    "static/js/main.98d6e09d.js"
+    "static/js/main.b7526e2b.js"
   ]
 }
