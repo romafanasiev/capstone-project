@@ -2,8 +2,6 @@
   "name": "capstone-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
-  // "homepage": "https://romafanasiev.github.io/capstone-project",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
