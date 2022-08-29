@@ -1,46 +1,42 @@
-import { Fragment, useContext } from "react";
-import { Outlet } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+
+import { selectCurrentUser } from '../../store/user/user.selector';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
-import CartIcon from "../../components/cart-icon/cart-icon.component";
-import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
-
-import { CartContext } from "../../context/cart.contex";
-import { selectCurrentUser } from "../../store/user/user.selector";
-
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 import {
   NavigationContainer,
-  NavLink,
   NavLinks,
-  LogoContainer
+  NavLink,
+  LogoContainer,
 } from './navigation.styles';
 
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
-  const { isCartOpen } = useContext(CartContext);
+  const isCartOpen = useSelector(selectIsCartOpen);
 
   return (
     <Fragment>
       <NavigationContainer>
-        <LogoContainer className="logo-container" to="/">
-          <CrwnLogo className="logo" />
+        <LogoContainer to='/'>
+          <CrwnLogo className='logo' />
         </LogoContainer>
-
         <NavLinks>
-          <NavLink className="nav-link" to="/shop">
-            SHOP
-          </NavLink>
+          <NavLink to='/shop'>SHOP</NavLink>
+
           {currentUser ? (
-            <span className="nav-link" onClick={signOutUser}>
+            <NavLink as='span' onClick={signOutUser}>
               SIGN OUT
-            </span>
-          ) : (
-            <NavLink className="nav-link" to="/auth">
-              SIGN IN
             </NavLink>
+          ) : (
+            <NavLink to='/auth'>SIGN IN</NavLink>
           )}
           <CartIcon />
         </NavLinks>
