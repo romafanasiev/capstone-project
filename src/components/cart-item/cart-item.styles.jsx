@@ -5,12 +5,13 @@ export const CartItemContainer = styled.div`
   display: flex;
   height: 80px;
   margin-bottom: 15px;
-`
 
-export const CartItemImage = styled.img`
-  width: 30%;
-`
-export const CartItemsDetails = styled.div`
+  img {
+    width: 30%;
+  }
+`;
+
+export const ItemDetails = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@ export const CartItemsDetails = styled.div`
   justify-content: center;
   padding: 10px 20px;
 
-  .name {
+  span {
     font-size: 16px;
   }
-`
+`;
